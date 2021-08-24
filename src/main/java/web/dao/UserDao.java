@@ -2,16 +2,19 @@ package web.dao;
 
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
+import web.model.Role;
 import web.model.User;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
+import java.util.Collections;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 @Component
 @Transactional(readOnly = true)
 public class UserDao {
-
     @PersistenceContext
     private EntityManager em;
 
