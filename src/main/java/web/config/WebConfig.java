@@ -13,6 +13,7 @@ import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 
 
 @EnableWebMvc
+@Configuration
 @ComponentScan("web")
 public class WebConfig implements WebMvcConfigurer {
 
@@ -47,6 +48,8 @@ public class WebConfig implements WebMvcConfigurer {
         ThymeleafViewResolver resolver = new ThymeleafViewResolver();
         resolver.setTemplateEngine(templateEngine());
         resolver.setCharacterEncoding("UTF-8");
+        resolver.setForceContentType(true); // <- this was added
+        resolver.setContentType("text/html; charset=UTF-8");
         registry.viewResolver(resolver);
     }
 
