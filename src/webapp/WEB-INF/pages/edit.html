@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://thymeleaf.org">
 <head>
   <meta charset="UTF-8">
   <title>Edit</title>
@@ -37,8 +37,8 @@
   <label>ADMIN</label>
   <input type="checkbox" th:value="ROLE_ADMIN" th:name="checkbox_roles"/>
   <br/>
-  <label>пассажир</label>
-  <input type="checkbox" th:value="ROLE_PASSENGER" th:name="checkbox_roles" checked/>
+  <label>user</label>
+  <input type="checkbox" th:value="ROLE_USER" th:name="checkbox_roles" checked/>
   <br/>
   <br/> <br/>
   <input type="submit" value="Update!"/>

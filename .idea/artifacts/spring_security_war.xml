@@ -3,11 +3,13 @@
     <output-path>$PROJECT_DIR$/target</output-path>
     <properties id="maven-jee-properties">
       <options>
+        <exploded>false</exploded>
         <module>spring-security</module>
         <packaging>war</packaging>
+        <unpackNestedArchives>false</unpackNestedArchives>
       </options>
     </properties>
-    <root id="archive" name="spring_mvc.war">
+    <root id="archive" name="spring_security.war">
       <element id="artifact" artifact-name="spring-security:war exploded" />
     </root>
   </artifact>

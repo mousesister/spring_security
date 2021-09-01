@@ -14,17 +14,17 @@ public class RoleDao {
     @PersistenceContext
     private EntityManager em;
 
-//    public void addRole(Role role) {
-//        em.persist(role);
-//    }
-//
-//    public void updateRole(Role role) {
-//        em.merge(role);
-//    }
-//
-//    public void removeRoleById(long id) {
-//        em.remove(em.find(Role.class, id));
-//    }
+    public void addRole(Role role) {
+        em.persist(role);
+    }
+
+    public void updateRole(Role role) {
+        em.merge(role);
+    }
+
+    public void removeRoleById(long id) {
+        em.remove(em.find(Role.class, id));
+    }
 
     public List<Role> getAllRoles() {
         return em.createQuery("select r from Role r").getResultList();

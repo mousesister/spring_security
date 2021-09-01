@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://thymeleaf.org">
 <head>
   <meta charset="UTF-8">
   <title>show profile</title>
@@ -18,7 +18,10 @@
 <p th:text="${user.getEmail()}">value</p>
 <span th:text="${user.getPassword()}">value</span>
 <span style="padding-left: 50px"> - пароль</span>
-
+<br/><br/>
+<span th:each="role : ${user.getAuthorities()}" id="role">
+    <span th:text="${role.getAuthority().substring(5)}">roles</span><br/>
+</span>
 <br/><br/>
 
 <br/><br/>
